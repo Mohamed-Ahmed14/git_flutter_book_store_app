@@ -12,7 +12,6 @@ class ShowNewArrivals extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ProductCubit.get(context).getNewArrivals();
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Column(

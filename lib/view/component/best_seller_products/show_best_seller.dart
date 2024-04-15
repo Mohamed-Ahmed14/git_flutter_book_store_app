@@ -10,7 +10,6 @@ class ShowBestSellerProducts extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ProductCubit.get(context).getBestSeller();
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Column(

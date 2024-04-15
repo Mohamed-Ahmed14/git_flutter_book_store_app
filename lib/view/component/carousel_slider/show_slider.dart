@@ -12,7 +12,6 @@ class ShowSlider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SliderCubit.get(context).getSlider();
     return BlocBuilder<SliderCubit,SliderState>(
       builder: (context, state) {
         return Visibility(

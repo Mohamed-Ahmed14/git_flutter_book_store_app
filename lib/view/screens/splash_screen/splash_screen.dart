@@ -8,21 +8,32 @@ import '../../component/best_seller_products/best_seller_item.dart';
 import '../../component/best_seller_products/show_best_seller.dart';
 import '../home_screen/home_screen.dart';
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatefulWidget {
    SplashScreen({super.key});
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
 
 
   @override
-  Widget build(BuildContext context) {
+  void initState() {
+    // TODO: implement initState
     Future.delayed(Duration(seconds: 5),() {
       Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => LoginScreen(),),(route) => false,);
     },);
+    super.initState();
+  }
+  @override
+  Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.white,
         body: Center(
           child: Image.asset("assets/images/book_logo2.png",width: 150,height: 150,),
-      
+
         ),
       ),
     );

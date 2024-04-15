@@ -11,7 +11,6 @@ class ShowCategory extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ProductCubit.get(context).getCategories();
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Column(
@@ -33,9 +32,10 @@ class ShowCategory extends StatelessWidget {
                 visible: (ProductCubit.get(context).categoryModel?.data?.category ?? []).isNotEmpty,
                 replacement: CircularProgressIndicator(),
                 child: SizedBox(
-                  height: 110,
+                  height: 120,
                   child: ListView.separated(
                       scrollDirection: Axis.horizontal,
+                      padding: EdgeInsetsDirectional.all(8),
                       itemBuilder: (context, index) {
                         return CategoryItem(category: ProductCubit.get(context).categoryModel?.data?.category?[index],);
                       },

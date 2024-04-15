@@ -63,5 +63,18 @@ class Product{
     image= json["image"];
     category = json["category"];
   }
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['id'] = this.id;
+    data['name'] = this.name;
+    data['price'] = this.price;
+    data['category'] = this.category;
+    data['image'] = this.image;
+    data['discount'] = this.discount;
+    data['stock'] = this.stock;
+    data['description'] = this.description;
+    data['best_seller'] = this.best_seller;
+    return data;
+  }
 }
 
